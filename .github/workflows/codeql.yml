@@ -32,7 +32,7 @@ jobs:
       with:
         languages: ${{ matrix.language }}
         build-mode: ${{ matrix.build-mode }}
-        disable-default-queries: true
+        config-file: ./codeql-config.yml
         queries: +github/codeql/javascript/ql/src/experimental/Security/CWE-094/UntrustedCheckout.ql@main,github/codeql/javascript/ql/src/Security/CWE-094/ExpressionInjection.ql@main
 
     - name: Perform CodeQL Analysis
